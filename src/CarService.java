@@ -18,7 +18,7 @@ public class CarService {
     }
 
     public Car getCarFromNumberPlate(String numberPlate){
-        if(this.cars.size() == 0){
+        if(this.cars.isEmpty()){
             throw new NoCarsException("Ingen Biler På Auktion");
         }
         for(Car car : this.cars){
@@ -26,7 +26,7 @@ public class CarService {
                 return car;
             }
         }
-        throw new NoCarsException("Ingen Bil Med Denne Numberplade");
+        throw new NoCarsException("Ingen Bil Med Denne Nummerplade");
     }
 
     public void sortCarsByReleaseYear(boolean isOrderReversed){

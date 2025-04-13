@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -22,7 +21,6 @@ public class BidService {
             throw new InvalidBidException("Invalid bud, bud skal være højere end bilens pris");
         }
         Bid bid = new Bid(bidderName, amount, car);
-        this.bids.add(bid);
         this.bidRepository.saveBid(bid);
     }
 

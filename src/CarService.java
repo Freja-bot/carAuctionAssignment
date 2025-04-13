@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -15,7 +14,6 @@ public class CarService {
 
     public void createCar(String brand, String model, int year, double basePrice, String numberPlate){
         Car car = new Car(brand, model, year, basePrice, numberPlate);
-        this.cars.add(car);
         this.carRepository.saveCar(car);
     }
 
